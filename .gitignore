@@ -1,0 +1,17 @@
+myenv/
+
+
+# Ignore virtual environment
+myenv/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore logs and databases
+*.log
+*.sqlite3

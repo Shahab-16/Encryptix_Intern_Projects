@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/titanic.css') }}">
+    <title>Titanic Survival Prediction</title>
+    
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Titanic Survival Prediction</h1>
+            <p id="description" class="description text-center">
+                Predicts whether a person will survive or not based on input data
+            </p>
+        </header>
+        <form id="survey-form" action="/titanic" method="POST">
+            <div class="form-group">
+                <label id="pclass-label" for="pclass">PClass</label>
+                <select id="pclass" name="pclass" class="form-control" required>
+                    <option disabled selected value>Select PClass</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <p>Sex</p>
+                <label><input name="sex" value="male" type="radio" class="input-radio" required />Male</label>
+                <label><input name="sex" value="female" type="radio" class="input-radio" />Female</label>
+            </div>
+    
+            <div class="form-group">
+                <label id="age-label" for="age">Age</label>
+                <input type="number" name="age" id="age" min="0" step="0.1" class="form-control" placeholder="Enter Age" required />
+            </div>
+    
+            <div class="form-group">
+                <label id="sibsings-label" for="Sibsp">Sibsings/Spouse Present</label>
+                <input type="number" name="Sibsp" id="Sibsp" min="0" max="5" class="form-control" placeholder="Enter number" required />
+            </div>
+    
+            <div class="form-group">
+                <label id="parents-label" for="Parch">Parents/Children Present</label>
+                <input type="number" name="parents" id="Parch" min="0" max="6" class="form-control" placeholder="Enter number" required />
+            </div>
+    
+            <div class="form-group">
+                <label id="fare-label" for="Fare">Fare</label>
+                <input type="number" name="Fare" id="Fare" step="0.01" class="form-control" placeholder="Enter Fare" required />
+            </div>
+    
+            <div class="form-group">
+                <label id="embarked-label" for="Embarked">Embarked</label>
+                <select id="Embarked" name="Embarked" class="form-control" required>
+                    <option disabled selected value>Select Embarked</option>
+                    <option value="C">C</option>
+                    <option value="Q">Q</option>
+                    <option value="S">S</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label id="title-label" for="Title">Title</label>
+                <select id="Title" name="Title" class="form-control" required>
+                    <option disabled selected value>Select Title</option>
+                    <option value="Title_Capt">Captain</option>
+                    <option value="Countess">Countess</option>
+                    <option value="Col">Col</option>
+                    <option value="Don">Don</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Lady">Lady</option>
+                    <option value="Major">Major</option>
+                    <option value="Master">Master</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Noble">Noble</option>
+                    <option value="Rev">Rev</option>
+                    <option value="Sir">Sir</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea id="comments" name="comment" class="input-textarea" placeholder="Enter your comment here..."></textarea>
+            </div>
+    
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
+        </form>
+        <div id="prediction-result" class='predicted_result'>
+            {% if result %}
+                <p>The Person {{ result }} in the Titanic Accident</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

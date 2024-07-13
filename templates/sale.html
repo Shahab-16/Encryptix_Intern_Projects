@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sale.css') }}">
+    <title>Machine Learning Models</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center mb-4">Sale Price Prediction</h1>
+        <form id="survey-form" method='Post' action='/sale'>
+          <div class="form-group">
+            <label for="tv">TV</label>
+            <input type="number" step="any" name="tv" id="tv" class="form-control" placeholder="Enter TV Advertising Expense" required />
+          </div>
+          <div class="form-group">
+            <label for="radio">Radio</label>
+            <input type="number" step="any" name="radio" id="radio" class="form-control" placeholder="Enter Radio Advertising Expense" required />
+          </div>
+          <div class="form-group">
+            <label for="newspaper">Newspaper</label>
+            <input type="number" step="any" name="newspaper" id="newspaper" class="form-control" placeholder="Enter Newspaper Advertising Expense" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div class='predicted_result'>
+            {% if result %}
+                <p>Predicted Sale :  ${{ result }}</p>
+            {% endif %}
+        </div>
+      </div>
+    
+</body>
+</html>

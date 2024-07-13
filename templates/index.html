@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Machine Learning Models</title>
+</head>
+<body>
+    <div class='wrapper'>
+        <h1 class='title'>Welcome To My Encryptix Summer Intern Projects</h1>
+        <div class='buttons'>
+            <a href='{{ url_for('titanic')}}'>
+                <button class='btn-grad'>Titanic Survival Prediction</button>
+            </a>
+
+            <a href='{{url_for('movie')}}'>
+                <button class='btn-grad'>Movie Rating Prediction</button>
+            </a>
+
+            <a href='{{url_for('sale')}}'>
+                <button class='btn-grad'>Sale Price Prediction</button>
+            </a>
+            
+
+        </div>
+    </div>
+    
+</body>
+</html>

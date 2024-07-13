@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movie.css') }}">
+    <title>Machine Learning Models</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Movie Survey Form</h1>
+        <form id="survey-form" action='/movie' method='Post'>
+          <div class="form-group">
+            <label for="release-year">Release Year</label>
+            <input type="number" name="release-year" id="release-year" class="form-control" placeholder="Enter release year" required />
+          </div>
+          <div class="form-group">
+            <label for="duration">Duration of the movie</label>
+            <input type="number" name="duration" id="duration" class="form-control" placeholder="Enter duration (in minutes)" required />
+          </div>
+          <div class="form-group">
+            <label for="genre">Genre</label>
+            <input type="text" name="genre" id="genre" class="form-control" placeholder="Enter movie genre" required />
+          </div>
+          <div class="form-group">
+            <label for="votes">Votes</label>
+            <input type="number" name="votes" id="votes" class="form-control" placeholder="Enter number of votes" required />
+          </div>
+          <div class="form-group">
+            <label for="director">Director</label>
+            <input type="text" name="director" id="director" class="form-control" placeholder="Enter director's name" required />
+          </div>
+          <div class="form-group">
+            <label for="actor1">Actor 1</label>
+            <input type="text" name="actor1" id="actor1" class="form-control" placeholder="Enter first actor's name" required />
+          </div>
+          <div class="form-group">
+            <label for="actor2">Actor 2</label>
+            <input type="text" name="actor2" id="actor2" class="form-control" placeholder="Enter second actor's name" required />
+          </div>
+          <div class="form-group">
+            <label for="actor3">Actor 3</label>
+            <input type="text" name="actor3" id="actor3" class="form-control" placeholder="Enter third actor's name" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div class='predicted_result'>
+          {% if result %}
+            <p>Movie Rating : {{result}}</p>
+          {% endif %}
+        </div>
+      </div>
+</body>
+</html>

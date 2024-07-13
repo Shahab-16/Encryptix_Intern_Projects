@@ -1,0 +1,120 @@
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.wrapper{
+    padding-top: 3rem;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15%;
+}
+
+
+.wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-position: center;
+    filter: blur(1.5px);
+    z-index: -1;
+}
+
+
+.title{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, #1D976C 0%, #93F9B9 51%, #1D976C 100%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+    width: 50%;
+}
+
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+}
+
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #1D976C 0%, #93F9B9 51%, #1D976C 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: inline-block; 
+    width: 250px; 
+    height: 60px; 
+    text-decoration: none; 
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+ 
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding-top: 2rem;
+        gap: 10%;
+    }
+    
+    .title {
+        width: 70%;
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+    
+    .btn-grad {
+        width: 200px;
+        height: 50px;
+        padding: 10px 35px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding-top: 1rem;
+        gap: 10%;
+    }
+    
+    .title {
+        width: 90%;
+        padding: 10px 10px;
+        font-size: 1rem;
+    }
+    
+    .btn-grad {
+        width: 150px;
+        height: 40px;
+        padding: 8px 25px;
+        font-size: 0.8rem;
+    }
+}

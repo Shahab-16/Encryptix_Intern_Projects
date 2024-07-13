@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?w=996&t=st=1720691537~exp=1720692137~hmac=eaa8ddf30d4ab631bfac02bf6d01647c867daaacaa34ea8e01df7fd2c7b2049a') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+  }
+  .container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    font-weight: bold;
+    color: #333; 
+  }
+  .form-control {
+    width: 100%;
+    border: 1px solid #ccc; 
+    padding: 8px; 
+    border-radius: 4px; 
+  }
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px; 
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; 
+  }
+
+  .predicted_result{
+    font-size: 1.5rem;
+    color: var(--color-white);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+
+  @media (max-width: 1200px) {
+    .container {
+        max-width: 80%;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 2rem;
+    }
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .btn-primary {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    .predicted_result {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://repository-images.githubusercontent.com/185072275/61066800-6f99-11e9-9436-732e6305bbca') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(1.5px);
+    z-index: -1;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    font-weight: bold;
+    color: #333; 
+}
+.form-control {
+    width: 100%;
+    border: 1px solid #ccc; 
+    padding: 8px; 
+    border-radius: 4px; 
+}
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px; 
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+.predicted_result{
+    font-size: 1.5rem;
+    color: var(--color-white);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 1200px) {
+    .container {
+        max-width: 80%;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 2rem;
+    }
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        margin: 1rem;
+    }
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .btn-primary {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    .predicted_result {
+        font-size: 1.2rem;
+    }
+}
